@@ -1,0 +1,180 @@
+/* 1. Variables - Figma Design System ke mutabiq */
+:root {
+  --color-lime: #C1FF72;   /* Aapka Green */
+  --color-dark: #1F2937;   /* Aapka Dark/Grey */
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --font-p: 16px;          /* p mob size */
+}
+
+/* 2. Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif; /* Ya jo bhi font Figma mein hai */
+}
+
+/* 3. Navbar Desktop Layout */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background-color: var(--color-white);
+  position: relative; /* Zaroori hai taake dropdown iske niche se nikle */
+  z-index: 100;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-dark);
+  font-size: var(--font-p);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--color-lime);
+}
+
+.quote-btn {
+  border: 1px solid var(--color-black);
+  background: transparent;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.quote-btn:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+/* 4. Hamburger Menu (Mobile Only) */
+.menu-toggle {
+  display: none; /* Desktop par chupa hua */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-black);
+  transition: 0.3s;
+}
+
+/* 5. RESPONSIVE MEDIA QUERY (Mobile View) */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex; /* Mobile par icon dikhega */
+  }
+
+  .nav-links {
+    /* Dropdown Logic */
+    position: absolute;
+    top: -400px; /* Shuru mein screen se ooper */
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--color-white);
+    padding: 40px 0;
+    text-align: center;
+    gap: 20px; /* <--- Yahan 'px' aur value mukammal karni hai */
+    transition: all 0.5s ease-in-out; /* Smoothness ke liye */
+    z-index: -1;
+  }
+
+  /* Ye class tab kaam karegi jab JS ise add karega */
+  .nav-links.active {
+    top: 70px; /* Is se menu niche aayega */
+  }
+}
+/* --- Hero Section CSS --- */
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center karne ke liye */
+    padding: 60px 8%;  /* Navbar ke barabar padding */
+    gap: 40px;
+}
+
+.left-box {
+    flex: 1; /* Ye text ko 50% jagah dega */
+}
+
+.right-box {
+    flex: 1; /* Ye image ko 50% jagah dega */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.right-box img {
+    max-width: 100%; /* Image container se bahar nahi jayegi */
+    height: auto;
+}
+
+.hero-container h1 {
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: var(--color-black);
+}
+
+.hero-container p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 35px;
+    color: var(--color-dark);
+    max-width: 500px;
+}
+
+/* Hero Section ka Button (Book a Consultation) */
+.left-box a {
+    display: inline-block;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: 18px 35px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.left-box a:hover {
+    background-color: var(--color-black);
+}
+
+/* --- Hero Section MOBILE Responsive --- */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column-reverse; /* Mobile par image pehle ya text niche */
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    .hero-container h1 {
+        font-size: 43px; /* Wahi size jo aapki Figma image mein tha */
+    }
+
+    .hero-container p {
+        font-size: 16px;
+        margin: 0 auto 30px auto;
+    }
+
+    .right-box {
+        justify-content: center;
+    }
+}
