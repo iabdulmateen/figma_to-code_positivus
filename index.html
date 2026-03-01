@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Positivus | Digital Marketing Agency</title>
     <link rel="stylesheet" href="./style.css">
-  
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <!-- navbar -->
@@ -33,23 +33,28 @@
 </nav>
 <!-- hero section -->
 <div class="hero-container">
-    <div class="left-box">
+    <div class="left-box"  data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">>
         <h1>Navigating the digital landscape for success</h1>
         <p>Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.</p>
         <a href="#">Book a consultation</a>
     </div>
-    <div class="right-box">
+    <div class="right-box " data-aos="fade-left"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="500">>
         <img src="./images/herosection.png" alt="illustration">
     </div>
 </div>
 <!-- logos section -->
 <div class="logo-types">
-    <img src="./logos/Company logo.svg" alt="amazon">
-    <img src="./logos/Company logo (1).svg" alt="">
-    <img src="./logos/Company logo (2).svg" alt="hubspot">
-    <img src="./logos/Company logo (3).svg" alt="notion">
-    <img src="./logos/Company logo (4).svg" alt="netflix">
-    <img src="./logos/Company logo (5).svg" alt="zoom">
+    <img src="./logos/Company logo.svg" alt="amazon" data-aos="fade-up" data-aos-delay="100">
+    <img src="./logos/Company logo (1).svg" alt="" data-aos="fade-up" data-aos-delay="200">
+    <img src="./logos/Company logo (2).svg" alt="hubspot" data-aos="fade-up" data-aos-delay="300">
+    <img src="./logos/Company logo (3).svg" alt="notion" data-aos="fade-up" data-aos-delay="400">
+    <img src="./logos/Company logo (4).svg" alt="netflix" data-aos="fade-up" data-aos-delay="500">
+    <img src="./logos/Company logo (5).svg" alt="zoom" data-aos="fade-up" data-aos-delay="600">
 </div>
 <!-- service section -->
 <section class="services-container">
@@ -257,14 +262,14 @@
     </div>
 </section>
 <!-- team section -->
-<section class="team-section">
+<section class="team-section  data-aos="fade-up"">
     <div class="services-intro">
         <h2 class="section-title">Team</h2>
         <p class="section-desc">Meet the skilled and experienced team behind our successful digital marketing strategies</p>
     </div>
 
     <div class="team-grid">
-        <div class="team-card">
+        <div class="team-card" data-aos="zoom-in">
             <div class="card-top">
                 <div class="member-image">
                     <img src="./images/mem1.png" alt="John Smith">
@@ -282,7 +287,7 @@
                 <p>10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy</p>
             </div>
         </div>
-       <div class="team-card">
+       <div class="team-card" data-aos="zoom-in">
             <div class="card-top">
                 <div class="member-image">
                     <img src="./images/mem2.png" alt="John Smith">
@@ -300,7 +305,7 @@
                 <p>7+ years of experience in project management and team leadership. Strong organizational and communication skills</p>
             </div>
         </div>
-       <div class="team-card">
+       <div class="team-card " data-aos="zoom-in">
             <div class="card-top">
                 <div class="member-image">
                     <img src="./images/mem3.png" alt="John Smith">
@@ -318,7 +323,7 @@
                 <p>5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization</p>
             </div>
         </div>
-        <div class="team-card">
+        <div class="team-card " data-aos="zoom-in">
             <div class="card-top">
                 <div class="member-image">
                     <img src="./images/mem4.png" alt="John Smith">
@@ -336,7 +341,7 @@
                 <p>3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis</p>
             </div>
         </div>
-       <div class="team-card">
+       <div class="team-card " data-aos="zoom-in">
             <div class="card-top">
                 <div class="member-image">
                     <img src="./images/mem5.png" alt="John Smith">
@@ -354,7 +359,7 @@
                 <p>4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement</p>
             </div>
         </div>
-       <div class="team-card">
+       <div class="team-card  " data-aos="zoom-in">
             <div class="card-top">
                 <div class="member-image">
                     <img src="./images/mem6.png" alt="John Smith">
@@ -539,7 +544,13 @@ Skilled in creating compelling, SEO-optimized content for various industries</p>
         </div>
     </div>
 </footer>
-
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
 <script src="./script.js"></script>
 </body>
 </html>
