@@ -11,7 +11,6 @@ A pixel-perfect, fully responsive landing page built with modern CSS techniques.
 - **Fully Responsive:** Optimized for Desktop, Tablet, and Mobile screens.
 - **Interactive UI:** Smooth hover effects on cards and buttons.
 - **Working Accordion:** A clean "Working Process" section using JS.
-- **Custom Slider:** Testimonials section with a unique design.
 - **Contact Form:** Professional layout with custom-styled radio buttons.
 - 
 ## 🚀 Live Demo
