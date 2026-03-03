@@ -23,5 +23,3 @@ You can view the live website here: [**Live Preview Link**](https://figma-to-cod
 ├── css/             # Stylesheets
 ├── js/              # JavaScript files
 └── index.html       # Main HTML file
-[Abdul Mateen]
-LinkedIn: www.linkedin.com/in/abdul-mateen-5a3237334
